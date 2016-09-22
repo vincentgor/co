@@ -196,6 +196,17 @@ fn(true).then(function (val) {
 });
 ```
 
+### co.setPromise(Promise)
+
+You can custom `Promise` that you like . Such as `bluebird`, `q`, `when` and so on.
+
+```js
+var Promise = require('bluebird');
+co.setPromise(Promise);
+
+co(11).tap(console.log);
+```
+
 ## License
 
   MIT
