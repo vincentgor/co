@@ -6,10 +6,24 @@
 var slice = Array.prototype.slice;
 
 /**
+ * default Promise
+ */
+
+var Promise = global.Promise;
+
+/**
  * Expose `co`.
  */
 
 module.exports = co['default'] = co.co = co;
+
+/**
+ * custom your Promise that you like
+ */
+
+co.setPromise = function (promise) {
+  Promise = promise;
+}
 
 /**
  * Wrap the given generator `fn` into a
