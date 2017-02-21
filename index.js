@@ -21,9 +21,14 @@ module.exports = co['default'] = co.co = co;
  * custom your Promise that you like
  */
 
-co.setPromise = function (promise) {
-  Promise = promise;
-}
+Object.defineProperty(co,"promise",{
+  get: function () {
+    return Promise;
+  },
+  set: function (promise) {
+    Promise = promise;
+  }
+});
 
 /**
  * Wrap the given generator `fn` into a
