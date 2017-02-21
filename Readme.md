@@ -202,7 +202,7 @@ You can custom `Promise` that you like . Such as `bluebird`, `q`, `when` and so 
 
 ```js
 var Promise = require('bluebird');
-co.setPromise(Promise);
+co.promise = Promise;
 
 co(11).tap(console.log);
 ```
